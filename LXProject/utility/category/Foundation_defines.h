@@ -48,6 +48,8 @@
 #define default_StartPage 0
 
 #define kUserid [[NSUserDefaults standardUserDefaults] valueForKey:@"userid"]
+#define kUserLevel [[NSUserDefaults standardUserDefaults] valueForKey:@"userlevel"]
+
 #define kVersion7 ([[[UIDevice currentDevice] systemVersion] floatValue]>=7.0)
 #define k4Inch kScreenHeight - 480
 

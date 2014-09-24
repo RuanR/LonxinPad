@@ -124,7 +124,23 @@
     [_scrollView addSubview:selectBackgroud];
     
     _scrollView.contentSize = CGSizeMake(btnWidth, 112 * titles.count);
+    
+    [self addConstraints];
 
+}
+
+- (void)addConstraints{
+    NSArray *hArray = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[scrollView]-|"
+                                                             options:0
+                                                             metrics:nil
+                                                               views:@{@"scrollView":self.scrollView}];
+    NSArray *vArray = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[scrollView]-|"
+                                                              options:0
+                                                              metrics:nil
+                                                                views:@{@"scrollView":self.scrollView}];
+    [self.view addConstraints:hArray];
+    [self.view addConstraints:vArray];
+    
 }
 
 -(void)selectedTab:(UIButton *)button

@@ -57,6 +57,7 @@
     [self getScreenPicture];
     //文章列表
     [self getNewsList];
+    
 }
 
 //获取新闻列表

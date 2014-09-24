@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *txtContent;
 @property (weak, nonatomic) IBOutlet UIButton *btnOk;
 
+@property (weak, nonatomic) IBOutlet UIView *userView;
 @end
 
 @implementation AfterSalesViewController
@@ -92,7 +93,17 @@
 }
 
 - (IBAction)okButtonClicked:(id)sender {
-    
+    [self.view endEditing:YES];
+    NSString *title = _txtTitle.text;
+    NSString *content = _txtContent.text;
+    if (!title.length || !content.length) {
+        return;
+    }
+    NSString *urlStr = [NSString stringWithFormat:kAddMassage,title,content,kUserid];
+    [NetEngine createGetAction:urlStr
+                  onCompletion:^(id resData, id resString, BOOL isCache) {
+                      DLog(@"%@",resData);
+                  }];
 }
 
 
