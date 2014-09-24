@@ -21,6 +21,7 @@
     [_baseTabbar selectedTab:btn];
     [self.window makeKeyAndVisible];
     self.window.rootViewController = _baseTabbar;
+    self.window.backgroundColor = [UIColor clearColor];
     
    [self.window makeKeyAndVisible];
     return YES;
