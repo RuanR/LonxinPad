@@ -116,6 +116,12 @@ static tapGestureBlock _tapBlock;
     self.layer.borderWidth = 1.0;
 }
 
+-(void)allRoundCorner{
+    self.layer.masksToBounds = YES;
+    self.layer.cornerRadius = self.frameWidth/2;
+    self.layer.borderWidth = 0.0;
+}
+
 -(void)rotateViewStart;
 {
     CABasicAnimation* rotationAnimation;

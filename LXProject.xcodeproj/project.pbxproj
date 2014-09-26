@@ -11,6 +11,8 @@
 		4B3FD97619CFF117004375A3 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3FD97419CFF117004375A3 /* ProductDetailViewController.xib */; };
 		4B3FD97F19D013E0004375A3 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3FD97D19D013E0004375A3 /* TableViewCell.m */; };
 		4B3FD98019D013E0004375A3 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3FD97E19D013E0004375A3 /* TableViewCell.xib */; };
+		4B820CCE19D2C99800DC62F0 /* InteractiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B820CCD19D2C99800DC62F0 /* InteractiveCell.m */; };
+		4B820CD019D2C9C000DC62F0 /* InteractiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B820CCF19D2C9C000DC62F0 /* InteractiveCell.xib */; };
 		4BC9293619CACCB200DC2186 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC9293519CACCB200DC2186 /* Foundation.framework */; };
 		4BC9293819CACCB200DC2186 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC9293719CACCB200DC2186 /* CoreGraphics.framework */; };
 		4BC9293A19CACCB200DC2186 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC9293919CACCB200DC2186 /* UIKit.framework */; };
@@ -70,6 +72,8 @@
 		4BDCB85D19CD57DD00B05B8B /* NewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BDCB85B19CD57DD00B05B8B /* NewsDetailViewController.xib */; };
 		4BDCB86119CD7EB800B05B8B /* AnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDCB85F19CD7EB800B05B8B /* AnswerViewController.m */; };
 		4BDCB86219CD7EB800B05B8B /* AnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BDCB86019CD7EB800B05B8B /* AnswerViewController.xib */; };
+		4BFA324819D51A0E0057E9C9 /* AddTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA324619D51A0E0057E9C9 /* AddTopicViewController.m */; };
+		4BFA324919D51A0E0057E9C9 /* AddTopicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA324719D51A0E0057E9C9 /* AddTopicViewController.xib */; };
 		7093EF52E8E645059A0987F7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1127098F6D4D29B1ED5880 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +94,9 @@
 		4B3FD97C19D013E0004375A3 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		4B3FD97D19D013E0004375A3 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		4B3FD97E19D013E0004375A3 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		4B820CCC19D2C99800DC62F0 /* InteractiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveCell.h; sourceTree = "<group>"; };
+		4B820CCD19D2C99800DC62F0 /* InteractiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveCell.m; sourceTree = "<group>"; };
+		4B820CCF19D2C9C000DC62F0 /* InteractiveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InteractiveCell.xib; sourceTree = "<group>"; };
 		4BC9293219CACCB200DC2186 /* LXProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC9293519CACCB200DC2186 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4BC9293719CACCB200DC2186 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -185,6 +192,9 @@
 		4BDCB85E19CD7EB800B05B8B /* AnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerViewController.h; sourceTree = "<group>"; };
 		4BDCB85F19CD7EB800B05B8B /* AnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerViewController.m; sourceTree = "<group>"; };
 		4BDCB86019CD7EB800B05B8B /* AnswerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerViewController.xib; sourceTree = "<group>"; };
+		4BFA324519D51A0E0057E9C9 /* AddTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTopicViewController.h; sourceTree = "<group>"; };
+		4BFA324619D51A0E0057E9C9 /* AddTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTopicViewController.m; sourceTree = "<group>"; };
+		4BFA324719D51A0E0057E9C9 /* AddTopicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTopicViewController.xib; sourceTree = "<group>"; };
 		5179C510C63E47E6A062BA73 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		DC1127098F6D4D29B1ED5880 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -253,6 +263,7 @@
 				4BC9294519CACCB300DC2186 /* AppDelegate.m */,
 				4BC929AA19CAD54700DC2186 /* first */,
 				4BDCB85819CD57BD00B05B8B /* second */,
+				4BFA324419D519800057E9C9 /* third */,
 				4BC9296419CACD3F00DC2186 /* utility */,
 				4BC9294719CACCB300DC2186 /* Images.xcassets */,
 				4BC9293C19CACCB300DC2186 /* Supporting Files */,
@@ -422,6 +433,9 @@
 				4B3FD97C19D013E0004375A3 /* TableViewCell.h */,
 				4B3FD97D19D013E0004375A3 /* TableViewCell.m */,
 				4B3FD97E19D013E0004375A3 /* TableViewCell.xib */,
+				4B820CCC19D2C99800DC62F0 /* InteractiveCell.h */,
+				4B820CCD19D2C99800DC62F0 /* InteractiveCell.m */,
+				4B820CCF19D2C9C000DC62F0 /* InteractiveCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -449,6 +463,16 @@
 				4B3FD97419CFF117004375A3 /* ProductDetailViewController.xib */,
 			);
 			path = second;
+			sourceTree = "<group>";
+		};
+		4BFA324419D519800057E9C9 /* third */ = {
+			isa = PBXGroup;
+			children = (
+				4BFA324519D51A0E0057E9C9 /* AddTopicViewController.h */,
+				4BFA324619D51A0E0057E9C9 /* AddTopicViewController.m */,
+				4BFA324719D51A0E0057E9C9 /* AddTopicViewController.xib */,
+			);
+			path = third;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -537,12 +561,14 @@
 				4BC929A019CACD3F00DC2186 /* blackArrow.png in Resources */,
 				4BC929BE19CAD61600DC2186 /* NewsViewController.xib in Resources */,
 				4BC9299E19CACD3F00DC2186 /* SVProgressHUD.bundle in Resources */,
+				4B820CD019D2C9C000DC62F0 /* InteractiveCell.xib in Resources */,
 				4BC929A519CACD3F00DC2186 /* grayArrow@2x.png in Resources */,
 				4BCA8B4719CC295900962253 /* NewsCell.xib in Resources */,
 				4BC929D719CAD69100DC2186 /* AfterSalesViewController.xib in Resources */,
 				4BC929D219CAD67900DC2186 /* InteractiveViewController.xib in Resources */,
 				4BC929A319CACD3F00DC2186 /* blueArrow@2x.png in Resources */,
 				4BDCB85D19CD57DD00B05B8B /* NewsDetailViewController.xib in Resources */,
+				4BFA324919D51A0E0057E9C9 /* AddTopicViewController.xib in Resources */,
 				4BDCB86219CD7EB800B05B8B /* AnswerViewController.xib in Resources */,
 				4BC929A219CACD3F00DC2186 /* blueArrow.png in Resources */,
 				4BC929CD19CAD66400DC2186 /* AboutViewController.xib in Resources */,
@@ -605,6 +631,7 @@
 			files = (
 				4BC929C719CAD64A00DC2186 /* StoryViewController.m in Sources */,
 				4B3FD97519CFF117004375A3 /* ProductDetailViewController.m in Sources */,
+				4BFA324819D51A0E0057E9C9 /* AddTopicViewController.m in Sources */,
 				4BC9299319CACD3F00DC2186 /* NSDictionary+expanded.m in Sources */,
 				4BC9299C19CACD3F00DC2186 /* SDDataCache.m in Sources */,
 				4BC929D119CAD67900DC2186 /* InteractiveViewController.m in Sources */,
@@ -615,6 +642,7 @@
 				4BC929D619CAD69100DC2186 /* AfterSalesViewController.m in Sources */,
 				4BCA8B4619CC295900962253 /* NewsCell.m in Sources */,
 				4BC9299A19CACD3F00DC2186 /* NetEngine.m in Sources */,
+				4B820CCE19D2C99800DC62F0 /* InteractiveCell.m in Sources */,
 				4BC929C219CAD62400DC2186 /* ProductViewController.m in Sources */,
 				4BC9299919CACD3F00DC2186 /* UIView+expanded.m in Sources */,
 				4BC929BD19CAD61600DC2186 /* NewsViewController.m in Sources */,

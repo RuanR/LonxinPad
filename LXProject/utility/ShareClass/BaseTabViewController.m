@@ -82,7 +82,7 @@
     //选中背景
     double btnHight = 112, btnWidth = 138;
     
-    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(kScreenWidth-btnWidth, kVersion7 ? 64 : 44, btnWidth, kScreenHeight - (kVersion7 ? 64 : 44))];
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(kScreenWidth-btnWidth, 64, btnWidth, kScreenHeight - 64)];
     _scrollView.showsVerticalScrollIndicator = NO;
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ipad主菜单渐变底色.png"]];
@@ -130,11 +130,15 @@
 }
 
 - (void)addConstraints{
-    NSArray *hArray = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[scrollView]-|"
-                                                             options:0
-                                                             metrics:nil
-                                                               views:@{@"scrollView":self.scrollView}];
-    NSArray *vArray = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[scrollView]-|"
+    
+    _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    NSArray *hArray = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[scrollView(138)]-0-|"
+                                                              options:0
+                                                              metrics:nil
+                                                                views:@{@"scrollView":self.scrollView,
+                                                                        @"view":self.view}];
+    NSArray *vArray = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-64-[scrollView]-0-|"
                                                               options:0
                                                               metrics:nil
                                                                 views:@{@"scrollView":self.scrollView}];

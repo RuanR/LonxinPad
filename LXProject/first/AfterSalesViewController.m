@@ -12,19 +12,29 @@
 #import "NSDictionary+expanded.h"
 #import "NewsCell.h"
 #import "Utility.h"
+#import "NSString+expanded.h"
 #import "NewsDetailViewController.h"
 
 @interface AfterSalesViewController ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *headImageView;
+@property (weak, nonatomic) IBOutlet UIView *userView;
 @property (weak, nonatomic) IBOutlet UILabel *lblUserName;
 @property (weak, nonatomic) IBOutlet UILabel *lblSex;
-@property (weak, nonatomic) IBOutlet UILabel *lblContry;
+@property (weak, nonatomic) IBOutlet UILabel *lblArea;
+@property (weak, nonatomic) IBOutlet UIImageView *imageHeader;
+
+@property (weak, nonatomic) IBOutlet UIView *loginView;
+@property (weak, nonatomic) IBOutlet UITextField *txtUserNo;
+@property (weak, nonatomic) IBOutlet UITextField *txtPassword;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnLogin;
+@property (weak, nonatomic) IBOutlet UIButton *btnLoginOut;
+
 @property (weak, nonatomic) IBOutlet UITextField *txtTitle;
 @property (weak, nonatomic) IBOutlet UITextView *txtContent;
 @property (weak, nonatomic) IBOutlet UIButton *btnOk;
 
-@property (weak, nonatomic) IBOutlet UIView *userView;
+
 @end
 
 @implementation AfterSalesViewController
@@ -52,6 +62,12 @@
 }
 
 - (void)initData{
+    
+    NSDictionary *dic = [[NSUserDefaults standardUserDefaults] valueForKey:@"userinfo"];
+    if (dic.count) {
+        [self showUserinfo:dic];
+    }
+    
     NSString *urlStr = [NSString stringWithFormat:kArticleList,@"4",@"%@",@"%@"];
     [self.tableView loadUrl:urlStr];
 }
@@ -106,6 +122,74 @@
                   }];
 }
 
+//弹框
+- (IBAction)loginOrOutButtonClicked:(UIButton *)sender {
+    
+    if ([sender isEqual:_btnLogin]) {
+        _loginView.hidden = NO;
+    } else {
+        [[NSUserDefaults standardUserDefaults] setValue:@{} forKey:@"userinfo"];
+        [[NSUserDefaults standardUserDefaults] setValue:@"" forKey:@"userid"];
+        [[NSUserDefaults standardUserDefaults] setValue:@"" forKey:@"userlevel"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        _userView.hidden = YES;
+        _btnLoginOut.hidden = YES;
+        _btnLogin.hidden = NO;
+    }
+    
+}
+
+//登陆
+- (IBAction)loginButtonClicked:(id)sender {
+    
+    [self.view endEditing:YES];
+    NSString *userNO = _txtUserNo.text;
+    NSString *password = _txtPassword.text;
+    if (!userNO.length || !password.length) {
+        return;
+    }
+    
+    NSString *urlStr = [NSString stringWithFormat:kLogin,userNO,password.md5];
+    [NetEngine createGetAction:urlStr
+                  onCompletion:^(id resData, id resString, BOOL isCache) {
+                      DLog(@"%@",resData);
+                      if (resData && !isCache) {
+                          NSDictionary *dic = [resData valueForJSONKey:@"value"];
+                          [self saveUserInfo:dic];
+                          [self showUserinfo:dic];
+                      }
+                      
+                  }];
+    
+    
+}
+
+- (void)showUserinfo:(NSDictionary *)dic{
+    _loginView.hidden = YES;
+    _userView.hidden = NO;
+    _btnLoginOut.hidden = NO;
+    _btnLogin.hidden = YES;
+    _lblUserName.text = [dic valueForJSONStrKey:@"ci_Nickname"];
+    _lblSex.text = [[dic valueForJSONStrKey:@"ci_Sex"] intValue] ? @"男" : @"女";
+    _lblArea.text = [dic valueForJSONStrKey:@"ci_Area"];
+    
+    NSString *headerUrlStr = [dic valueForJSONStrKey:@"ci_Head"];
+    NSURL *url = [NSURL URLWithString:headerUrlStr];
+    [_imageHeader setImageWithURL:url placeholderImage:[UIImage imageNamed:@""]];
+    
+}
+
+- (void)saveUserInfo:(NSDictionary *)dic{
+    
+    [[NSUserDefaults standardUserDefaults] setValue:dic forKey:@"userinfo"];
+    NSString *userId = [dic valueForJSONStrKey:@"ci_Id"];
+    [[NSUserDefaults standardUserDefaults] setValue:userId forKey:@"userid"];
+    NSString *userLevel = [dic valueForJSONStrKey:@"ci_level"];
+    [[NSUserDefaults standardUserDefaults] setValue:userLevel forKey:@"userlevel"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+}
 
 - (void)didReceiveMemoryWarning
 {

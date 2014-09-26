@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="139" id="bDn-G2-0M8" customClass="InteractiveCell">
+            <rect key="frame" x="0.0" y="0.0" width="460" height="139"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bDn-G2-0M8" id="voA-8t-UE8">
+                <rect key="frame" x="0.0" y="0.0" width="460" height="138"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgH-rd-ifp">
+                        <rect key="frame" x="20" y="15" width="214" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2w-X9-tLB">
+                        <rect key="frame" x="20" y="58" width="420" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbm-Or-LgE">
+                        <rect key="frame" x="20" y="106" width="420" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSD-Ku-dvb">
+                        <rect key="frame" x="267" y="15" width="179" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zOP-ko-X7d">
+                        <rect key="frame" x="20" y="137" width="440" height="1"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zOP-ko-X7d" firstAttribute="top" secondItem="Nbm-Or-LgE" secondAttribute="bottom" constant="10" id="5U2-1A-CSC"/>
+                    <constraint firstAttribute="trailing" secondItem="Nbm-Or-LgE" secondAttribute="trailing" constant="20" id="90u-4X-igg"/>
+                    <constraint firstAttribute="trailing" secondItem="jSD-Ku-dvb" secondAttribute="trailing" constant="14" id="AXd-j3-xKI"/>
+                    <constraint firstAttribute="bottom" secondItem="jSD-Ku-dvb" secondAttribute="bottom" constant="102" id="Mgb-kG-2Oz"/>
+                    <constraint firstItem="Nbm-Or-LgE" firstAttribute="leading" secondItem="voA-8t-UE8" secondAttribute="leading" constant="20" id="N7t-AO-Oae"/>
+                    <constraint firstItem="Nbm-Or-LgE" firstAttribute="top" secondItem="G2w-X9-tLB" secondAttribute="bottom" constant="27" id="T1g-Q3-Ocr"/>
+                    <constraint firstItem="jSD-Ku-dvb" firstAttribute="leading" secondItem="MgH-rd-ifp" secondAttribute="trailing" constant="33" id="UIt-XD-vcy"/>
+                    <constraint firstItem="zOP-ko-X7d" firstAttribute="leading" secondItem="voA-8t-UE8" secondAttribute="leading" constant="20" id="YLu-DC-xtu"/>
+                    <constraint firstItem="jSD-Ku-dvb" firstAttribute="top" secondItem="voA-8t-UE8" secondAttribute="top" constant="15" id="b9I-0H-EKB"/>
+                    <constraint firstItem="MgH-rd-ifp" firstAttribute="top" secondItem="voA-8t-UE8" secondAttribute="top" constant="15" id="bCo-Dd-wsn"/>
+                    <constraint firstAttribute="bottom" secondItem="Nbm-Or-LgE" secondAttribute="bottom" constant="11" id="hN3-9Z-AqS"/>
+                    <constraint firstAttribute="bottom" secondItem="zOP-ko-X7d" secondAttribute="bottom" id="kTg-cc-dcv"/>
+                    <constraint firstAttribute="trailing" secondItem="zOP-ko-X7d" secondAttribute="trailing" id="mLY-Pp-jU9"/>
+                    <constraint firstAttribute="trailing" secondItem="G2w-X9-tLB" secondAttribute="trailing" constant="20" id="nEW-0X-mGk"/>
+                    <constraint firstItem="G2w-X9-tLB" firstAttribute="top" secondItem="MgH-rd-ifp" secondAttribute="bottom" constant="22" id="rOy-E7-Uua"/>
+                    <constraint firstItem="MgH-rd-ifp" firstAttribute="leading" secondItem="voA-8t-UE8" secondAttribute="leading" constant="20" id="vyr-xy-Z85"/>
+                    <constraint firstItem="G2w-X9-tLB" firstAttribute="leading" secondItem="voA-8t-UE8" secondAttribute="leading" constant="20" id="zQf-Zv-rrX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblCompany" destination="G2w-X9-tLB" id="8EW-Ky-pcA"/>
+                <outlet property="lblDetail" destination="Nbm-Or-LgE" id="pmT-LS-yD9"/>
+                <outlet property="lblTime" destination="jSD-Ku-dvb" id="dbw-6U-zfL"/>
+                <outlet property="lblTitle" destination="MgH-rd-ifp" id="kJo-l4-jAp"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

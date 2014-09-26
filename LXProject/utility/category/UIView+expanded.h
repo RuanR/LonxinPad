@@ -31,6 +31,7 @@ typedef void (^tapGestureBlock)(UIView *view);
 
 
 -(void)roundCorner;
+-(void)allRoundCorner;
 -(void)rotateViewStart;
 -(void)rotateViewStop;
 -(void)addSubviews:(UIView *)view,...NS_REQUIRES_NIL_TERMINATION;
