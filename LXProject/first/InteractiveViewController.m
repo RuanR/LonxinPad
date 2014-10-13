@@ -15,6 +15,7 @@
 #import "Utility.h"
 #import "AddTopicViewController.h"
 #import "UIImage+expanded.h"
+#import "ReplyListCell.h"
 
 @interface InteractiveViewController ()<UITextFieldDelegate,UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>{
     UIImage *pickImage;
@@ -35,7 +36,11 @@
 
 @property (weak, nonatomic) IBOutlet UIView *inputView;
 @property (weak, nonatomic) IBOutlet UITextField *txtSendText;
+@property (weak, nonatomic) IBOutlet UITextField *txtContent;
 
+@property (weak, nonatomic) IBOutlet RHTableView *topicDetaiTableview;
+
+@property (nonatomic, copy) NSString *pl_id;
 
 @end
 
@@ -60,6 +65,13 @@
     [self initData];
     
     _txtSendText.inputAccessoryView = _inputView;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow) name:UIKeyboardWillShowNotification object:nil];
+    
+}
+
+- (void)keyboardWillShow{
+    [_txtContent becomeFirstResponder];
 }
 
 - (void)initData{
@@ -73,8 +85,15 @@
 }
 
 - (void)loadTableData{
+    
     NSString *urlStr = [NSString stringWithFormat:kGetPostsListt,kUserid,kUserLevel,@"%@",@"%@"];
     [self.tableView loadUrl:urlStr];
+    
+}
+
+- (void)loadReplyList:(NSString *)pl_id{
+    NSString *urlStr = [NSString stringWithFormat:kGetPostReplyList,pl_id,@"%@",@"%@"];
+    [_topicDetaiTableview loadUrl:urlStr];
 }
 
 #pragma mark - UITableViewDelegate/UITableViewDatasource
@@ -89,22 +108,44 @@
 }
 
 - (UITableViewCell *)tableView:(RHTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *identifier = @"Cell";
-    InteractiveCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (!cell) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"InteractiveCell" owner:self options:nil] firstObject];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    static NSString *identifier;
+    BOOL isTableView = [tableView isEqual:self.tableView];
+    identifier = isTableView ? @"Cell" : @"ReplyCell";
+    
+    if (isTableView) {
+        
+        InteractiveCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        if (!cell) {
+            cell = [[[NSBundle mainBundle] loadNibNamed:@"InteractiveCell" owner:self options:nil] firstObject];
+        }
+        if (indexPath.row == 0) {
+            [self loadReplyList:[tableView.dataArray[indexPath.row] valueForJSONStrKey:@"pl_id"]];
+        }
+        NSDictionary *dic = tableView.dataArray[indexPath.row];
+        cell.lblTitle.text = [dic valueForJSONStrKey:@"pl_Theme"];
+        cell.lblTime.text = [dic valueForJSONStrKey:@"pl_PostTime"];
+        cell.lblCompany.text = [dic valueForJSONStrKey:@"pl_publisher"];
+        cell.lblDetail.text = [dic valueForJSONStrKey:@"pl_Content"];
+        
+        return cell;
+        
+    } else {
+        
+        ReplyListCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        if (!cell) {
+            cell = [[[NSBundle mainBundle] loadNibNamed:@"ReplyListCell" owner:self options:nil] firstObject];
+        }
+        return cell;
+        
     }
-    NSDictionary *dic = tableView.dataArray[indexPath.row];
-    cell.lblTitle.text = [dic valueForJSONStrKey:@"pl_Theme"];
-    cell.lblTime.text = [dic valueForJSONStrKey:@"pl_PostTime"];
-    cell.lblCompany.text = [dic valueForJSONStrKey:@"pl_publisher"];
-    cell.lblDetail.text = [dic valueForJSONStrKey:@"pl_Content"];
-    return cell;
+    
+    
+    
 }
 
 - (void)tableView:(RHTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    self.pl_id = [tableView.dataArray[indexPath.row] valueForJSONStrKey:@"pl_id"];
+    [self loadReplyList:self.pl_id];
 }
 
 
@@ -221,10 +262,21 @@
 //发送
 - (IBAction)sendButtonClicked:(id)sender {
     
+    NSString *content = _txtContent.text;
+    if (!content.length) return;
+    
+    NSString *urlStr = [NSString stringWithFormat:kAddPostReply,kUserid,_pl_id,content];
+    [NetEngine createGetAction:urlStr onCompletion:^(id resData, id resString, BOOL isCache) {
+        DLog(@"%@",resData);
+        if (resData && !isCache) {
+            self.txtContent.text = @"";
+            [self.view endEditing:YES];
+        }
+    }];
 }
 //添加新的topic
 - (IBAction)addNewTopicClicked:(id)sender {
-    if ([kUserid length]) {
+    if (![kUserid length]) {
         _loginView.hidden = NO;
     } else {
         AddTopicViewController *addtopic = [[AddTopicViewController alloc] init];

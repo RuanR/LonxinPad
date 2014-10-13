@@ -45,3 +45,8 @@
 #define kGetAbout @"GetArticle.aspx?id=%@&category=%@&edition=2"
 
 #define kGetArtDetail @"ImproveHandler.ashx?func=GetStory&st_id=%@&user=%@"
+#define kAddPostReply @"PostslistHandler.ashx?func=AddPostReply&pr_CustomerNo=%@&pl_id=%@&pr_content=%@"
+#define kAdd @"PostslistHandler.ashx?func=Add&CustomerNo=%@&Content=%@&Theme=%@"
+#define kGetPostReplyList @"PostslistHandler.ashx?pl_id=%@&endIndex=%@&startIndex=%@&func=GetPostReplyList"
+#define kGetQuestionnaireList @"QuestionnaireHandler.ashx?func=%@&qi_id=%@&qu_id=%@&ar_Answer=%@&startIndex=%@&endIndex=%@"
+

@@ -4,9 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnswerViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionListViewController">
             <connections>
-                <outlet property="tableView" destination="bBW-lL-V5G" id="hRu-Kf-dZf"/>
+                <outlet property="tableView" destination="eah-Dd-HEo" id="kNr-dJ-Ow7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,23 +15,17 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bBW-lL-V5G" customClass="RHTableView">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eah-Dd-HEo" customClass="RHTableView">
                     <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="pgC-qP-0b7"/>
-                        <outlet property="delegate" destination="-1" id="sY1-Kv-AlI"/>
+                        <outlet property="dataSource" destination="-1" id="jQ3-Xw-rb7"/>
+                        <outlet property="delegate" destination="-1" id="tpc-Bz-h8E"/>
                     </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="bBW-lL-V5G" secondAttribute="trailing" id="GWE-S9-RLa"/>
-                <constraint firstItem="bBW-lL-V5G" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ubw-LX-p1H"/>
-                <constraint firstItem="bBW-lL-V5G" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lMd-mv-18K"/>
-                <constraint firstAttribute="bottom" secondItem="bBW-lL-V5G" secondAttribute="bottom" id="pyE-Dk-2Pp"/>
-            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
         </view>
     </objects>

@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B3B8E1B19D64A6600E506EF /* ReplyListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B8E1919D64A6600E506EF /* ReplyListCell.m */; };
+		4B3B8E1C19D64A6600E506EF /* ReplyListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3B8E1A19D64A6600E506EF /* ReplyListCell.xib */; };
+		4B3B8E2019D656DE00E506EF /* QuestionListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B8E1E19D656DE00E506EF /* QuestionListCell.m */; };
+		4B3B8E2119D656DE00E506EF /* QuestionListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3B8E1F19D656DE00E506EF /* QuestionListCell.xib */; };
+		4B3B8E2519D6587400E506EF /* AnswerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B8E2319D6587400E506EF /* AnswerDetailViewController.m */; };
+		4B3B8E2619D6587400E506EF /* AnswerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3B8E2419D6587400E506EF /* AnswerDetailViewController.xib */; };
+		4B3B8E2A19D65B9B00E506EF /* QuestionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B8E2819D65B9B00E506EF /* QuestionListViewController.m */; };
+		4B3B8E2B19D65B9B00E506EF /* QuestionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3B8E2919D65B9B00E506EF /* QuestionListViewController.xib */; };
+		4B3B8E2F19D65F8B00E506EF /* QuestionSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B8E2D19D65F8B00E506EF /* QuestionSingleCell.m */; };
+		4B3B8E3019D65F8B00E506EF /* QuestionSingleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3B8E2E19D65F8B00E506EF /* QuestionSingleCell.xib */; };
 		4B3FD97519CFF117004375A3 /* ProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3FD97319CFF117004375A3 /* ProductDetailViewController.m */; };
 		4B3FD97619CFF117004375A3 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3FD97419CFF117004375A3 /* ProductDetailViewController.xib */; };
 		4B3FD97F19D013E0004375A3 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3FD97D19D013E0004375A3 /* TableViewCell.m */; };
@@ -88,6 +98,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B3B8E1819D64A6600E506EF /* ReplyListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyListCell.h; sourceTree = "<group>"; };
+		4B3B8E1919D64A6600E506EF /* ReplyListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyListCell.m; sourceTree = "<group>"; };
+		4B3B8E1A19D64A6600E506EF /* ReplyListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReplyListCell.xib; sourceTree = "<group>"; };
+		4B3B8E1D19D656DE00E506EF /* QuestionListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionListCell.h; sourceTree = "<group>"; };
+		4B3B8E1E19D656DE00E506EF /* QuestionListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionListCell.m; sourceTree = "<group>"; };
+		4B3B8E1F19D656DE00E506EF /* QuestionListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionListCell.xib; sourceTree = "<group>"; };
+		4B3B8E2219D6587400E506EF /* AnswerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerDetailViewController.h; sourceTree = "<group>"; };
+		4B3B8E2319D6587400E506EF /* AnswerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerDetailViewController.m; sourceTree = "<group>"; };
+		4B3B8E2419D6587400E506EF /* AnswerDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerDetailViewController.xib; sourceTree = "<group>"; };
+		4B3B8E2719D65B9B00E506EF /* QuestionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionListViewController.h; sourceTree = "<group>"; };
+		4B3B8E2819D65B9B00E506EF /* QuestionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionListViewController.m; sourceTree = "<group>"; };
+		4B3B8E2919D65B9B00E506EF /* QuestionListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionListViewController.xib; sourceTree = "<group>"; };
+		4B3B8E2C19D65F8B00E506EF /* QuestionSingleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionSingleCell.h; sourceTree = "<group>"; };
+		4B3B8E2D19D65F8B00E506EF /* QuestionSingleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionSingleCell.m; sourceTree = "<group>"; };
+		4B3B8E2E19D65F8B00E506EF /* QuestionSingleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionSingleCell.xib; sourceTree = "<group>"; };
 		4B3FD97219CFF117004375A3 /* ProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailViewController.h; sourceTree = "<group>"; };
 		4B3FD97319CFF117004375A3 /* ProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailViewController.m; sourceTree = "<group>"; };
 		4B3FD97419CFF117004375A3 /* ProductDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
@@ -436,6 +461,15 @@
 				4B820CCC19D2C99800DC62F0 /* InteractiveCell.h */,
 				4B820CCD19D2C99800DC62F0 /* InteractiveCell.m */,
 				4B820CCF19D2C9C000DC62F0 /* InteractiveCell.xib */,
+				4B3B8E1819D64A6600E506EF /* ReplyListCell.h */,
+				4B3B8E1919D64A6600E506EF /* ReplyListCell.m */,
+				4B3B8E1A19D64A6600E506EF /* ReplyListCell.xib */,
+				4B3B8E1D19D656DE00E506EF /* QuestionListCell.h */,
+				4B3B8E1E19D656DE00E506EF /* QuestionListCell.m */,
+				4B3B8E1F19D656DE00E506EF /* QuestionListCell.xib */,
+				4B3B8E2C19D65F8B00E506EF /* QuestionSingleCell.h */,
+				4B3B8E2D19D65F8B00E506EF /* QuestionSingleCell.m */,
+				4B3B8E2E19D65F8B00E506EF /* QuestionSingleCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -458,6 +492,9 @@
 				4BDCB85E19CD7EB800B05B8B /* AnswerViewController.h */,
 				4BDCB85F19CD7EB800B05B8B /* AnswerViewController.m */,
 				4BDCB86019CD7EB800B05B8B /* AnswerViewController.xib */,
+				4B3B8E2219D6587400E506EF /* AnswerDetailViewController.h */,
+				4B3B8E2319D6587400E506EF /* AnswerDetailViewController.m */,
+				4B3B8E2419D6587400E506EF /* AnswerDetailViewController.xib */,
 				4B3FD97219CFF117004375A3 /* ProductDetailViewController.h */,
 				4B3FD97319CFF117004375A3 /* ProductDetailViewController.m */,
 				4B3FD97419CFF117004375A3 /* ProductDetailViewController.xib */,
@@ -471,6 +508,9 @@
 				4BFA324519D51A0E0057E9C9 /* AddTopicViewController.h */,
 				4BFA324619D51A0E0057E9C9 /* AddTopicViewController.m */,
 				4BFA324719D51A0E0057E9C9 /* AddTopicViewController.xib */,
+				4B3B8E2719D65B9B00E506EF /* QuestionListViewController.h */,
+				4B3B8E2819D65B9B00E506EF /* QuestionListViewController.m */,
+				4B3B8E2919D65B9B00E506EF /* QuestionListViewController.xib */,
 			);
 			path = third;
 			sourceTree = "<group>";
@@ -558,13 +598,16 @@
 				4BC9294019CACCB300DC2186 /* InfoPlist.strings in Resources */,
 				4B3FD98019D013E0004375A3 /* TableViewCell.xib in Resources */,
 				4BC929C819CAD64A00DC2186 /* StoryViewController.xib in Resources */,
+				4B3B8E2B19D65B9B00E506EF /* QuestionListViewController.xib in Resources */,
 				4BC929A019CACD3F00DC2186 /* blackArrow.png in Resources */,
+				4B3B8E3019D65F8B00E506EF /* QuestionSingleCell.xib in Resources */,
 				4BC929BE19CAD61600DC2186 /* NewsViewController.xib in Resources */,
 				4BC9299E19CACD3F00DC2186 /* SVProgressHUD.bundle in Resources */,
 				4B820CD019D2C9C000DC62F0 /* InteractiveCell.xib in Resources */,
 				4BC929A519CACD3F00DC2186 /* grayArrow@2x.png in Resources */,
 				4BCA8B4719CC295900962253 /* NewsCell.xib in Resources */,
 				4BC929D719CAD69100DC2186 /* AfterSalesViewController.xib in Resources */,
+				4B3B8E1C19D64A6600E506EF /* ReplyListCell.xib in Resources */,
 				4BC929D219CAD67900DC2186 /* InteractiveViewController.xib in Resources */,
 				4BC929A319CACD3F00DC2186 /* blueArrow@2x.png in Resources */,
 				4BDCB85D19CD57DD00B05B8B /* NewsDetailViewController.xib in Resources */,
@@ -573,8 +616,10 @@
 				4BC929A219CACD3F00DC2186 /* blueArrow.png in Resources */,
 				4BC929CD19CAD66400DC2186 /* AboutViewController.xib in Resources */,
 				4BC929A119CACD3F00DC2186 /* blackArrow@2x.png in Resources */,
+				4B3B8E2619D6587400E506EF /* AnswerDetailViewController.xib in Resources */,
 				4BC929A419CACD3F00DC2186 /* grayArrow.png in Resources */,
 				4B3FD97619CFF117004375A3 /* ProductDetailViewController.xib in Resources */,
+				4B3B8E2119D656DE00E506EF /* QuestionListCell.xib in Resources */,
 				4BC929B919CAD60200DC2186 /* ImproverViewController.xib in Resources */,
 				4BC929C319CAD62400DC2186 /* ProductViewController.xib in Resources */,
 				4BC9294819CACCB300DC2186 /* Images.xcassets in Resources */,
@@ -631,6 +676,7 @@
 			files = (
 				4BC929C719CAD64A00DC2186 /* StoryViewController.m in Sources */,
 				4B3FD97519CFF117004375A3 /* ProductDetailViewController.m in Sources */,
+				4B3B8E2519D6587400E506EF /* AnswerDetailViewController.m in Sources */,
 				4BFA324819D51A0E0057E9C9 /* AddTopicViewController.m in Sources */,
 				4BC9299319CACD3F00DC2186 /* NSDictionary+expanded.m in Sources */,
 				4BC9299C19CACD3F00DC2186 /* SDDataCache.m in Sources */,
@@ -650,16 +696,20 @@
 				4BDCB85419CD32C100B05B8B /* EScrollerView.m in Sources */,
 				4BC929A819CACD3F00DC2186 /* MessageInterceptor.m in Sources */,
 				4BC9299719CACD3F00DC2186 /* UIColor+expanded.m in Sources */,
+				4B3B8E2019D656DE00E506EF /* QuestionListCell.m in Sources */,
 				4BC929B819CAD60200DC2186 /* ImproverViewController.m in Sources */,
 				4BC929A719CACD3F00DC2186 /* LoadMoreTableFooterView.m in Sources */,
 				4BC9299419CACD3F00DC2186 /* NSMutableArray+expanded.m in Sources */,
 				4BC9299619CACD3F00DC2186 /* NSString+expanded.m in Sources */,
+				4B3B8E2F19D65F8B00E506EF /* QuestionSingleCell.m in Sources */,
 				4BCA8B3C19CBB03A00962253 /* BaseTabViewController.m in Sources */,
 				4BC929DD19CAD7BA00DC2186 /* BaseViewController.m in Sources */,
 				4BC929A919CACD3F00DC2186 /* RHTableView.m in Sources */,
 				4BDCB86119CD7EB800B05B8B /* AnswerViewController.m in Sources */,
 				4BC9294219CACCB300DC2186 /* main.m in Sources */,
 				4B3FD97F19D013E0004375A3 /* TableViewCell.m in Sources */,
+				4B3B8E1B19D64A6600E506EF /* ReplyListCell.m in Sources */,
+				4B3B8E2A19D65B9B00E506EF /* QuestionListViewController.m in Sources */,
 				4BC929A619CACD3F00DC2186 /* EGORefreshTableHeaderView.m in Sources */,
 				4BC9299B19CACD3F00DC2186 /* RHMethods.m in Sources */,
 				4BC929DA19CAD6D900DC2186 /* BaseNavigationViewController.m in Sources */,

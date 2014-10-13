@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InteractiveViewController">
@@ -15,6 +15,8 @@
                 <outlet property="lblUserName" destination="blD-M7-IPq" id="Fbe-ro-fNr"/>
                 <outlet property="loginView" destination="Jtf-3H-06N" id="edE-w1-5F8"/>
                 <outlet property="tableView" destination="GLP-oz-Kh6" id="6V8-LR-lUv"/>
+                <outlet property="topicDetaiTableview" destination="8Bl-O9-Sbr" id="NLC-Gz-Iap"/>
+                <outlet property="txtContent" destination="nFO-a8-bNx" id="EuO-aW-HYt"/>
                 <outlet property="txtPassword" destination="fZy-hz-fq8" id="5Q9-e9-Qx5"/>
                 <outlet property="txtSendText" destination="qHD-Zg-D3Y" id="UcH-rP-WXn"/>
                 <outlet property="txtUserNo" destination="flM-om-EIb" id="BNg-u8-ypq"/>
@@ -27,7 +29,7 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oo5-Gn-z58">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oo5-Gn-z58">
                     <rect key="frame" x="13" y="13" width="144" height="969"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
@@ -89,7 +91,7 @@
                     <color key="backgroundColor" red="0.87058830259999997" green="0.87450987099999999" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8Bl-O9-Sbr" customClass="RHTableView">
-                    <rect key="frame" x="392" y="13" width="238" height="898"/>
+                    <rect key="frame" x="406" y="13" width="224" height="898"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
@@ -98,7 +100,7 @@
                     </connections>
                 </tableView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GLP-oz-Kh6" customClass="RHTableView">
-                    <rect key="frame" x="170" y="13" width="209" height="898"/>
+                    <rect key="frame" x="170" y="13" width="224" height="898"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
@@ -212,8 +214,10 @@
                 <constraint firstAttribute="trailing" secondItem="Sy5-Eb-EF6" secondAttribute="trailing" constant="138" id="2SA-X4-3W0"/>
                 <constraint firstItem="oo5-Gn-z58" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="13" id="4g6-nx-rKh"/>
                 <constraint firstAttribute="bottom" secondItem="Jtf-3H-06N" secondAttribute="bottom" constant="627" id="4k1-vr-uz6"/>
+                <constraint firstItem="GLP-oz-Kh6" firstAttribute="height" secondItem="8Bl-O9-Sbr" secondAttribute="height" id="7JT-VB-qXM"/>
                 <constraint firstItem="GLP-oz-Kh6" firstAttribute="leading" secondItem="oo5-Gn-z58" secondAttribute="trailing" constant="13" id="ClS-cA-n7c"/>
                 <constraint firstItem="LxD-Wx-Ic1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="392" id="HJ7-2w-fvu"/>
+                <constraint firstItem="GLP-oz-Kh6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="170" id="HzL-Aq-r4V"/>
                 <constraint firstAttribute="trailing" secondItem="8Bl-O9-Sbr" secondAttribute="trailing" constant="138" id="JK0-Ve-BpP"/>
                 <constraint firstItem="LxD-Wx-Ic1" firstAttribute="top" secondItem="8Bl-O9-Sbr" secondAttribute="bottom" constant="22" id="KgF-Pn-Aii"/>
                 <constraint firstItem="LxD-Wx-Ic1" firstAttribute="leading" secondItem="Wwi-6i-Q3D" secondAttribute="trailing" constant="13" id="KlD-zY-l9t"/>
@@ -226,11 +230,11 @@
                 <constraint firstAttribute="trailing" secondItem="LxD-Wx-Ic1" secondAttribute="trailing" constant="138" id="TSo-eh-UJk"/>
                 <constraint firstAttribute="centerX" secondItem="Jtf-3H-06N" secondAttribute="centerX" id="fh0-NJ-upQ"/>
                 <constraint firstAttribute="bottom" secondItem="Sy5-Eb-EF6" secondAttribute="bottom" id="ha8-qG-MMt"/>
-                <constraint firstItem="8Bl-O9-Sbr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="392" id="iWJ-M3-bZF"/>
                 <constraint firstItem="Wwi-6i-Q3D" firstAttribute="leading" secondItem="oo5-Gn-z58" secondAttribute="trailing" constant="13" id="kSj-aH-xDV"/>
                 <constraint firstItem="GLP-oz-Kh6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="13" id="lmv-G2-jTj"/>
                 <constraint firstItem="Wwi-6i-Q3D" firstAttribute="top" secondItem="GLP-oz-Kh6" secondAttribute="bottom" constant="22" id="nAi-Gs-tWg"/>
                 <constraint firstItem="oo5-Gn-z58" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="13" id="ycS-96-Y3E"/>
+                <constraint firstItem="GLP-oz-Kh6" firstAttribute="width" secondItem="8Bl-O9-Sbr" secondAttribute="width" id="z7v-y8-Voa"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
         </view>
